@@ -1,0 +1,27 @@
+[package]
+name = "crypt-tool"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[[bin]]
+name = "crypt-tool"
+path = "src/main.rs"
+
+[[bin]]
+name = "crypt-tool-gui"
+path = "src/gui.rs"
+
+[features]
+gui = ["eframe", "rfd", "walkdir"]
+
+[dependencies]
+age = "0.11"
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+zeroize = "1.8"
+
+# GUI dependencies (optional)
+eframe = { version = "0.29", optional = true, features = ["persistence", "accesskit"] }
+rfd = { version = "0.13", optional = true }
+walkdir = { version = "2.5", optional = true }

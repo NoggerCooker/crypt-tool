@@ -1,0 +1,7 @@
+# Rust build output (generated, not source)
+target/
+
+# Local/editor files
+.idea/
+.vscode/
+*.swp
